@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  due_date: 2015-03-02 14:24:18
+  done: 
+  default: 
+
+two:
+  description: MyString
+  due_date: 2015-03-02 14:24:18
+  done: 
+  default: 
