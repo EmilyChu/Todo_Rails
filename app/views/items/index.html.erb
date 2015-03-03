@@ -1,0 +1,6 @@
+<h3> These are all your items: </h3>
+<ul>
+<% @item.each do |i| %>
+  <li><%= i.description %></li>
+<% end %>
+</ul>
