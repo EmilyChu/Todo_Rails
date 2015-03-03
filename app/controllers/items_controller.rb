@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!  
+
   def index
     @item = Item.all
   end
@@ -8,6 +10,8 @@ class ItemsController < ApplicationController
   end
 
   def create
+    # @list = List.find(params["id"])
+    # @item = Item.find
     item_params = params["item"]
     @item = Item.create(description: item_params["description"])
     if @item.save
