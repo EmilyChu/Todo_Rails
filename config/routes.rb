@@ -8,13 +8,16 @@ Rails.application.routes.draw do
   root  'application#home'
 
   get   '/lists' => 'lists#index', as: 'lists'
-  
   get   '/lists/new' => 'lists#new', as: 'new_list'
   post  '/lists' => 'lists#create', as: 'list'
   get   '/lists/:id' => 'lists#show', as: 'specific_list'
-
   get   '/lists/:id/edit' => 'lists#edit', as: 'edit_list'
   patch '/lists/:id' => 'lists#update'
+
+  get   '/items' => 'items#index', as: 'items'
+  get   '/items/new' => 'items#new', as: 'new_item'
+  post  '/items' => 'items#create', as: 'item'
+  get   '/items/:id' => 'items#show', as: 'specific_item'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
