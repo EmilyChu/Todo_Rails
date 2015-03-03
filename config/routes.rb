@@ -14,10 +14,9 @@ Rails.application.routes.draw do
   get   '/lists/:id/edit' => 'lists#edit', as: 'edit_list'
   patch '/lists/:id' => 'lists#update'
 
-  get   '/items' => 'items#index', as: 'items'
-  get   '/items/new' => 'items#new', as: 'new_item'
-  post  '/items' => 'items#create', as: 'item'
-  get   '/items/:id' => 'items#show', as: 'specific_item'
+  get   '/lists/:list_id/new_item' => 'items#new', as: 'new_item'
+  post  '/lists/:list_id/items' => 'items#create', as: 'items'
+  get   '/lists/:list_id/items/:id' => 'items#show', as: 'specific_item'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
