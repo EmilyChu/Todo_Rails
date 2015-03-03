@@ -1,6 +1,12 @@
 <h3> Create A New List </h3>
 
-<form action="<%= list_path %>" method="POST">
+<!-- <form action="<%= list_path %>" method="POST">
   <input name="name" placeholder="List Name">
   <button>save</button>
-</form>
+</form> -->
+
+<%= form_for @list do |list| %>
+  <%= list.label :name %>
+  <%= list.text_field :name %>
+  <button>Submit</button>
+<% end %>

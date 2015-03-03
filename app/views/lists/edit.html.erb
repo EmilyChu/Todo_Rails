@@ -1,0 +1,7 @@
+<h3> Edit the list name</h3>
+
+<%= form_for @list do |list| %>
+  <%= list.label :edit_name %>
+  <%= list.text_field :name %>
+  <button>save</button>
+<% end %>
