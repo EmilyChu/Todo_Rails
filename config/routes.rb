@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   post  '/lists' => 'lists#create', as: 'list'
   get   '/lists/:id' => 'lists#show', as: 'specific_list'
 
-  # get   '/lists/:id/edit' => 'lists#edit', as: 'edit_list'
-  # patch '/lists/:id' => 'lists#update'
+  get   '/lists/:id/edit' => 'lists#edit', as: 'edit_list'
+  patch '/lists/:id' => 'lists#update'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
