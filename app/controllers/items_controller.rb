@@ -36,10 +36,8 @@ class ItemsController < ApplicationController
       flash[:notice] = "Item description changed to:"
       redirect_to specific_item_path(@item)
     else
-      render :edit
+      render :edit  #this probably isn't right..
     end
   end
-
-
 
 end
