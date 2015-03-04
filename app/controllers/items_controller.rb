@@ -45,4 +45,9 @@ class ItemsController < ApplicationController
     @item.description
   end
 
+  def search
+    @phrase = params["description"]
+    @task = Item.all
+  end
+
 end

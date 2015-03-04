@@ -20,7 +20,9 @@ Rails.application.routes.draw do
   get   '/items/:id/edit' => 'items#edit', as: 'item'
   patch '/items/:id/edit' => 'items#update'
   get   '/items' => 'items#index', as: 'all_items'
-  post   '/items/random' => 'items#random', as: 'random_item' 
+  post  '/items/random' => 'items#random', as: 'random_item'
+  get   '/search' => 'items#search', as: 'search_item'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,11 @@
+<h3> These are all the tasks that match your search </h3>
+
+<ul>
+<% @task.each do |i| %>
+  <% if /#{@phrase}/.match(i.description) %>
+    <li><%= "#{i.description}" %></li>
+  <% end %>
+<% end %>
+</ul>
+
+<%= button_to "Go back", root_path, method: "get", class: "btn btn-default" %>

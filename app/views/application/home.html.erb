@@ -2,6 +2,11 @@
   <h2> Welcome to your TODOs</h3>
   <a href="<%= lists_path %>">Lists</a> <br>
   <a href="<%= all_items_path %>">Items</a>
+
+<%= form_tag('/search', method: "get") do %>
+  <%= label(:description, "Search for:") %>
+  <%= text_field_tag(:description) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 </div>
-
-
