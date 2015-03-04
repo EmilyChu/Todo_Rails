@@ -26,6 +26,20 @@ class ItemsController < ApplicationController
     @item = Item.find(params["id"])
   end
 
+  def edit
+    @item = Item.find(params["id"])
+  end
+
+  def update
+    @item = Item.find(params["id"])
+    if @item.update(description: params["item"]["description"])
+      flash[:notice] = "Item description changed to:"
+      redirect_to specific_item_path(@item)
+    else
+      render :edit
+    end
+  end
+
 
 
 end

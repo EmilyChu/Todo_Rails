@@ -16,7 +16,10 @@ Rails.application.routes.draw do
 
   get   '/lists/:list_id/new_item' => 'items#new', as: 'new_item'
   post  '/lists/:list_id/items' => 'items#create', as: 'items'
-  get   '/lists/:list_id/items/:id' => 'items#show', as: 'specific_item'
+  get   '/items/:id' => 'items#show', as: 'specific_item'
+  get   '/items/:id/edit' => 'items#edit', as: 'item'
+  patch '/items/:id/edit' => 'items#update'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

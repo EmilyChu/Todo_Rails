@@ -1,5 +1,4 @@
 class ListsController < ApplicationController 
-  # enable :method_override
 
   def index
     @list = List.all
