@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.new(description: item_params["description"], due_date: item_params["due_date"], list_id: params["list_id"])
     if @item.save
       flash[:notice] = "Item created successfully!"
-      redirect_to specific_item_path(@list, @item)
+      redirect_to specific_item_path(@item)
     else
       render :new
     end
@@ -38,6 +38,11 @@ class ItemsController < ApplicationController
     else
       render :edit  #this probably isn't right..
     end
+  end
+
+  def random
+    @item = Item.all.sample
+    @item.description
   end
 
 end
